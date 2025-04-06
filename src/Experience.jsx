@@ -1,7 +1,9 @@
 // Importing OrbitControls and useGLTF from @react-three/drei
-// OrbitControls: Enables user interaction with the 3D scene (e.g., rotate, zoom, pan the camera)
+// Environment: Adds realistic lighting and reflections to the scene using HDRI or presets
 // useGLTF: A hook for loading 3D models in GLTF/GLB format easily into the scene
-import { useGLTF, OrbitControls } from '@react-three/drei'
+// OrbitControls: Enables user interaction with the 3D scene (e.g., rotate, zoom, pan the camera)
+import { Environment, useGLTF, OrbitControls } from '@react-three/drei'
+
 
 // Default export for the Experience component
 // This component sets up the 3D scene with an interactive camera and simple 3D objects
@@ -12,11 +14,20 @@ export default function Experience()
     const computer = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf')
 
     return <>
+
+        {/*
+        <Environment preset='city' />: 
+        adds a pre-configured environmental backdrop to the scene, simulating a cityscape. 
+        It automatically adjusts the lighting and background to reflect the city preset.
+        */}
+        <Environment preset='city' />
+
         {/*
         Set the entire background color of the 3D scene to a dark reddish-brown. 
         'args' defines color value, and ' attach="background" ' tells React Three Fiber to apply it as the scene background
         */}
         <color args={ [ '#241a1a']} attach="background" />
+
         {/* 
         OrbitControls allows us to manipulate the camera view. 
         'makeDefault' ensures this control is applied to the scene by default, 
@@ -41,6 +52,13 @@ export default function Experience()
             */}
             <meshNormalMaterial />
         </mesh>
+        
+        {/*
+        Display the 3D MacBook model in the scene
+        'computer.scene' contains the entire model loaded from a GLTF file
+        <primitive /> is used to insert non-React Three.js objects directly into the scene
 
+        */}
+        <primitive object={ computer.scene }/>
     </>
 }
