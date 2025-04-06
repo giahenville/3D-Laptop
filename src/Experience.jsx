@@ -7,6 +7,11 @@ import { OrbitControls } from '@react-three/drei'
 export default function Experience()
 {
     return <>
+        {/*
+        Set the entire background color of the 3D scene to a dark reddish-brown. 
+        'args' defines color value, and ' attach="background" ' tells React Three Fiber to apply it as the scene background
+        */}
+        <color args={ [ '#241a1a']} attach="background" />
         {/* 
         OrbitControls allows us to manipulate the camera view. 
         'makeDefault' ensures this control is applied to the scene by default, 
