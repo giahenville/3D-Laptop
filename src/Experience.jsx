@@ -1,11 +1,16 @@
-// Importing OrbitControls from @react-three/drei
-// This allows the user to interact with the 3D scene, like rotating, zooming, and panning the camera
-import { OrbitControls } from '@react-three/drei'
+// Importing OrbitControls and useGLTF from @react-three/drei
+// OrbitControls: Enables user interaction with the 3D scene (e.g., rotate, zoom, pan the camera)
+// useGLTF: A hook for loading 3D models in GLTF/GLB format easily into the scene
+import { useGLTF, OrbitControls } from '@react-three/drei'
 
 // Default export for the Experience component
 // This component sets up the 3D scene with an interactive camera and simple 3D objects
 export default function Experience()
 {
+    // Load the 3D MacBook model using useGLTF
+    // This hook fetches and parses the model from the provided URL, returning a usable 3D object
+    const computer = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf')
+
     return <>
         {/*
         Set the entire background color of the 3D scene to a dark reddish-brown. 
