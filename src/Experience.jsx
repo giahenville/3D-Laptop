@@ -2,7 +2,8 @@
 // Environment: Adds realistic lighting and reflections to the scene using HDRI or presets
 // useGLTF: A hook for loading 3D models in GLTF/GLB format easily into the scene
 // OrbitControls: Enables user interaction with the 3D scene (e.g., rotate, zoom, pan the camera)
-import { Environment, useGLTF, OrbitControls } from '@react-three/drei'
+// Float: Allows computer to float in space
+import { Float, Environment, useGLTF, OrbitControls } from '@react-three/drei'
 
 
 // Default export for the Experience component
@@ -35,30 +36,17 @@ export default function Experience()
         */}
         <OrbitControls makeDefault />
         
-        {/*
-        Creating a 3D object in the scene. 
-        This is a mesh, which is a combinations of geometry and material
-        */}
-        <mesh>
-
-            {/*
-            boxGeometry defines the shape of the 3D object
-            */ }
-            <boxGeometry />
-
-            {/*
-            meshNormalMaterial applies a basic material to the cube that colors the suface based on its normal direction.
-            This creates a simple but visually interesting effect for the object
-            */}
-            <meshNormalMaterial />
-        </mesh>
         
         {/*
         Display the 3D MacBook model in the scene
         'computer.scene' contains the entire model loaded from a GLTF file
         <primitive /> is used to insert non-React Three.js objects directly into the scene
-
         */}
-        <primitive object={ computer.scene }/>
+        <Float rotationIntensity={ 0.4 }> {/* Makes computer float with smaller rotation*/}
+        <primitive 
+            object={ computer.scene }
+            position-y={ - 1.2 }    // Position computer near center of screen
+        />
+        </Float>
     </>
 }
