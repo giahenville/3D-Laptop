@@ -11,3 +11,8 @@ body,
     height: 100%;           /* Makes element take up the entire height of the viewport */
     background: ivory;    /* Sets the background color of the body to ivory */
 }
+
+.r3f
+{
+    touch-action: none;
+}

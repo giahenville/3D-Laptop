@@ -17,6 +17,7 @@ const root = ReactDOM.createRoot(document.querySelector('#root'))
 // Render the <Canvas /> to display a 3D scene
 root.render(
     <Canvas
+        className='r3f' 
         // Set up camera with custom properties
         camera={ {
             fov: 45,                    // Field of view (angle of the camera's lens)
