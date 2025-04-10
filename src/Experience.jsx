@@ -18,15 +18,13 @@ export default function Experience()
         */}
         <Environment preset='city' />
 
-        {/*
-        Set the entire background color of the 3D scene to a dark reddish-brown. 
-        'args' defines color value, and ' attach="background" ' tells React Three Fiber to apply it as the scene background
-        */}
         <color args={ [ '#241a1a']} attach="background" />
 
-    
         <PresentationControls
             global
+            rotation={ [ 0.13, 0.1, 0 ] }   // Limit rotation
+            polar={ [ - 0.4, 0.2 ] }        // Limit veritcal drag and drop
+            azimuth={ [ -1, 0.75 ] }        // Limit horizontal drag and drop
         >  {/* Allows user to drag computer globally */}
             <Float rotationIntensity={ 0.4 }> {/* Makes computer float with smaller rotation*/}
             <primitive                      // Insert non-React Three.js object into scene
