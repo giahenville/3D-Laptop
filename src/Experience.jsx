@@ -1,4 +1,4 @@
-import { PresentationControls, Float, Environment, useGLTF} from '@react-three/drei'
+import { ContactShadows, PresentationControls, Float, Environment, useGLTF} from '@react-three/drei'
 
 
 // Default export for the Experience component
@@ -25,6 +25,8 @@ export default function Experience()
             rotation={ [ 0.13, 0.1, 0 ] }   // Limit rotation
             polar={ [ - 0.4, 0.2 ] }        // Limit veritcal drag and drop
             azimuth={ [ -1, 0.75 ] }        // Limit horizontal drag and drop
+            config={ { mass: 2, tension: 400 } }    // Tweak animation physics 
+            snap                            // Make model go back to initial position when mouse is released
         >  {/* Allows user to drag computer globally */}
             <Float rotationIntensity={ 0.4 }> {/* Makes computer float with smaller rotation*/}
             <primitive                      // Insert non-React Three.js object into scene
@@ -33,5 +35,12 @@ export default function Experience()
             />
             </Float>
         </PresentationControls>
+
+        <ContactShadows 
+        position-y={ - 1.4 }
+        opacity={ 0.4 }
+        scale={ 5 }
+        blur={ 2.4 }
+        />
     </>
 }
