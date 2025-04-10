@@ -1,9 +1,4 @@
-// Importing OrbitControls and useGLTF from @react-three/drei
-// Environment: Adds realistic lighting and reflections to the scene using HDRI or presets
-// useGLTF: A hook for loading 3D models in GLTF/GLB format easily into the scene
-// OrbitControls: Enables user interaction with the 3D scene (e.g., rotate, zoom, pan the camera)
-// Float: Allows computer to float in space
-import { Float, Environment, useGLTF, OrbitControls } from '@react-three/drei'
+import { PresentationControls, Float, Environment, useGLTF} from '@react-three/drei'
 
 
 // Default export for the Experience component
@@ -29,24 +24,16 @@ export default function Experience()
         */}
         <color args={ [ '#241a1a']} attach="background" />
 
-        {/* 
-        OrbitControls allows us to manipulate the camera view. 
-        'makeDefault' ensures this control is applied to the scene by default, 
-        enabling mouse interactions like rotating, zooming, and panning.
-        */}
-        <OrbitControls makeDefault />
-        
-        
-        {/*
-        Display the 3D MacBook model in the scene
-        'computer.scene' contains the entire model loaded from a GLTF file
-        <primitive /> is used to insert non-React Three.js objects directly into the scene
-        */}
-        <Float rotationIntensity={ 0.4 }> {/* Makes computer float with smaller rotation*/}
-        <primitive 
-            object={ computer.scene }
-            position-y={ - 1.2 }    // Position computer near center of screen
-        />
-        </Float>
+    
+        <PresentationControls
+            global
+        >  {/* Allows user to drag computer globally */}
+            <Float rotationIntensity={ 0.4 }> {/* Makes computer float with smaller rotation*/}
+            <primitive                      // Insert non-React Three.js object into scene
+                object={ computer.scene }   // Display computer in scene
+                position-y={ - 1.2 }        // Position computer near center of screen
+            />
+            </Float>
+        </PresentationControls>
     </>
 }
