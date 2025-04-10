@@ -1,4 +1,4 @@
-import { Html, ContactShadows, PresentationControls, Float, Environment, useGLTF} from '@react-three/drei'
+import { Text, Html, ContactShadows, PresentationControls, Float, Environment, useGLTF} from '@react-three/drei'
 
 
 // Default export for the Experience component
@@ -44,7 +44,7 @@ export default function Experience()
                 >
                     <Html
                         transform
-                        wrapperClass='htmlScreen'
+                        wrapperClass="htmlScreen"
                         distanceFactor={ 1.17 }
                         position={ [ 0, 1.56, - 1.4 ] }
                         rotation-x= { - 0.256 }
@@ -53,6 +53,16 @@ export default function Experience()
                         <iframe src='https://giahenville.github.io/admin-dashboard/'/> 
                     </Html>
                 </primitive>
+                <Text
+                    font="./bangers-v20-latin-regular.woff"
+                    fontSize={ 1 }
+                    position={ [ 2, 0.75, 0.75 ] }
+                    rotation-y= { - 1.25 }
+                    maxWidth={ 2 }
+                    textAlign='center'
+                > 
+                Gia Henville
+                </Text>
             </Float>
         </PresentationControls>
 
