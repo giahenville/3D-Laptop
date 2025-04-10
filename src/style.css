@@ -16,3 +16,13 @@ body,
 {
     touch-action: none; /* Allow user to drag computer on mobile devices*/
 }
+
+/* Allows website to fit better so that it is not squished*/
+.htmlScreen iframe
+{
+    width: 1024px;
+    height: 670px;
+    border: none;
+    border-radius: 20px;
+    background: #000000;
+}
