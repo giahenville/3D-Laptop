@@ -1,4 +1,4 @@
-# 3D Portfolio - MacBook Scene with Stars
+# 3D MacBook Scene 
 
 This project showcases a floating laptop that displays my galaxy generator website, with a starry background. 
 
@@ -20,7 +20,6 @@ This project showcases a floating laptop that displays my galaxy generator websi
 - A **floating animation** and **drag interaction** for an immersive experience.
 - An added **starry sky** effect made with a custom particles component.
 - Stylized 3D **text** that displays my name within the scene.
-- Responsive lighting and a cinematic city-themed environment backdrop.
 
 ## Code Overview
 
