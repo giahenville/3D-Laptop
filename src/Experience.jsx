@@ -1,4 +1,6 @@
 import { Text, Html, ContactShadows, PresentationControls, Float, Environment, useGLTF} from '@react-three/drei'
+import Particles from './Particles' 
+
 
 
 // Default export for the Experience component
@@ -19,6 +21,9 @@ export default function Experience()
         <Environment preset='city' />
 
         <color args={ [ '#241a1a']} attach="background" />
+        
+        {/* Add particles */}
+        <Particles/>
 
         <PresentationControls
             global
@@ -50,7 +55,7 @@ export default function Experience()
                         rotation-x= { - 0.256 }
                     > 
                         {/* Add website onto screen */}
-                        <iframe src='https://giahenville.github.io/admin-dashboard/'/> 
+                        <iframe src='https://18-galaxy-generator-iota.vercel.app/'/> 
                     </Html>
                 </primitive>
                 <Text
@@ -67,11 +72,11 @@ export default function Experience()
         </PresentationControls>
 
         {/* Add computer shadow */}
-        <ContactShadows 
+        {/* <ContactShadows 
         position-y={ - 1.4 }
         opacity={ 0.4 }
         scale={ 5 }
         blur={ 2.4 }
-        />  
+        />   */}
     </>
 }
