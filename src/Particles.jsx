@@ -1,4 +1,3 @@
-import * as THREE from 'three'
 import { useMemo } from 'react'
 import { Points, PointMaterial } from '@react-three/drei'
 

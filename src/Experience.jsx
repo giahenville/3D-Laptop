@@ -2,21 +2,17 @@ import { Text, Html, ContactShadows, PresentationControls, Float, Environment, u
 import Particles from './Particles' 
 
 
-
 // Default export for the Experience component
 // This component sets up the 3D scene with an interactive camera and simple 3D objects
 export default function Experience()
 {
     // Load the 3D MacBook model using useGLTF
-    // This hook fetches and parses the model from the provided URL, returning a usable 3D object
     const computer = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf')
 
     return <>
 
         {/*
-        <Environment preset='city' />: 
         adds a pre-configured environmental backdrop to the scene, simulating a cityscape. 
-        It automatically adjusts the lighting and background to reflect the city preset.
         */}
         <Environment preset='city' />
 

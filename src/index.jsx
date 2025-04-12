@@ -1,14 +1,6 @@
-// Import global styles
 import './style.css'
-
-// Import ReactDom to render the app
 import ReactDOM from 'react-dom/client'
-
-// Import the Canvas component from React Three Fiber
-// This replaces the traditional WebGLRenderer in Three.js
 import { Canvas } from '@react-three/fiber'
-
-// Import the Experience component, where 3D objects and logic live
 import Experience from './Experience.jsx'
 
 // Create a root container and attach the React app to the HTML element with id="root"
