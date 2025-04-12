@@ -4,7 +4,7 @@ This project showcases a floating laptop that displays my galaxy generator websi
 
 ## Demo
 
-> [Live Demo](https://giahenville.github.io/your-deployed-portfolio-url) (Replace with your live link)
+> [Live Demo](https://3-d-laptop-cyan.vercel.app/)
 
 ## Built With
 
@@ -40,8 +40,7 @@ A lightweight particle system:
 
 ## Image
 
-![Portfolio MacBook Screenshot](https://your-screenshot-link.com)  
-*(Replace with your screenshot)*
+![Portfolio MacBook Screenshot](./images/demo-img.png)  
 
 ## What I learned
 
